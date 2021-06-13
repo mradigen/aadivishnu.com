@@ -1,0 +1,69 @@
+@font-face {
+	font-family: "Iosevka";
+	src: url('../fonts/Iosevka.ttf');
+}
+
+:root {
+	--fg: #efefef;
+	--bg: #101010;
+	/* --mg: #888888; */
+	--mg: #1abc9c;
+	--font: "Iosevka", monospace;
+	/*--font: "Arial", sans-serif;*/
+}
+
+body {
+	font-family: var(--font);
+	/*font-size: 5vh;*/
+	line-height: 1.2;
+	letter-spacing: 0.1rem;
+
+	color: var(--fg);
+}
+
+.fadein {
+	animation: fadein 1s;
+	-webkit-animation: fadein 1s;
+}
+
+a {
+	color: var(--fg);
+	padding: 10px;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+a:hover {
+	color: var(--mg);
+	/*background: var(--mg);*/
+	text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+p {
+	/*font-size:  1em;*/
+	/*text-align: justify;*/
+}
+
+/*******************************************/
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
