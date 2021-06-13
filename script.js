@@ -27,7 +27,7 @@ command.addEventListener('keyup', () => {
 
 window.onpopstate = (e) => {
 	if (e.state != null) {
-		loadPage(e.state);
+		loadPage(e.state, true);
 	}
 }
 
@@ -61,11 +61,13 @@ article.onload = () => {
 	article.iframe.contentDocument.body.classList.add('fadein');
 };
 
-function loadPage(pageSrc) {
+function loadPage(pageSrc, historyBack = false) {
 	command.value = pageSrc;
 	resizeInput.call(command);
 
-	window.history.pushState(pageSrc, null, "?p=" + pageSrc);
+	if (!historyBack) {
+		window.history.pushState(pageSrc, null, "?p=" + pageSrc);
+	}
 
 	article.src = "pages/" + pageSrc + ".md";
 	article.load();
