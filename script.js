@@ -38,7 +38,8 @@ window.onload = () => {
 	if (urlParams.has("p")) {
 		var pageSrc = urlParams.get("p");
 		if (isNaN(pageSrc)) {
-			loadPage(pageSrc.substring(0, pageSrc.length - 1));
+			// loadPage(pageSrc.substring(0, pageSrc.length - 1));
+			loadPage(pageSrc);
 		} else {
 			loadPage("Hey!");
 		}
