@@ -1,0 +1,111 @@
+@font-face {
+	font-family: "Iosevka";
+	src: url('fonts/Iosevka.ttf');
+}
+
+:root {
+	--fg: #efefef;
+	--bg: #101010;
+	 /*--mg: #888888; */
+	--mg: #1abc9c;
+	--font: "Iosevka", monospace;
+	/*--font: "Arial", sans-serif;*/
+}
+
+body {
+	/* Position in center/middle */
+	display: flex;
+    justify-content: center;
+    padding-top: 35vh;
+
+    margin: 0;
+
+	font-family: var(--font);
+	font-weight: 300;
+	font-size: 1.5em;
+	line-height: 1.2;
+	letter-spacing: 0.1rem;
+
+	background-color: var(--bg);
+	color: var(--fg);
+
+	animation: fadein 1s;
+	-webkit-animation: fadein 1s;
+}
+
+#UI {
+	/*width: 40vw;*/
+	width: 55vw;
+	/*max-width: 100%;*/
+	padding-bottom: 10vh;
+	transition: width 1s;
+}
+
+@media only screen and (max-width: 680px) {
+	#UI {
+		width: 80vw;
+	}
+}
+
+/*footer {
+	font-size: 0.5em;
+}*/
+
+#prompt {
+	color: var(--mg);
+}
+input {
+	font-family: var(--font);
+	font-size: 1em;
+	text-align: left;
+
+	outline: none;
+	background: 0;
+	border: 0;
+	color: var(--fg);
+}
+#cursor {
+	color: var(--mg);
+	animation: blinker 2s ease infinite;
+}
+
+hr {
+	border: solid 1px;
+}
+
+#mdp-frame {
+	width: 100%;
+	border: 0;
+	margin: auto;
+	display: block;
+}
+
+p {
+	font-size:  0.7em;
+}
+
+/*******************************************/
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
