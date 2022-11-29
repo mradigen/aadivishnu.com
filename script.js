@@ -23,15 +23,27 @@ var tiles = [
     img:
       "https://cdn.glitch.com/2186056a-7444-45fe-a5f4-1c2e34d293ef%2Flytn.png?v=1616400697977",
     name: "lytn",
-    subtitle: "a super fun little game!",
+    subtitle: "a physics based 2D platformer!",
     link: "https://lytn.glitch.me"
   },
   {
-    img: "https://img.itch.zone/aW1nLzU1ODc2ODYucG5n/347x500/HShPho.png",
-    name: "Hire",
-    subtitle: "I'm running out of lines!",
-    link: "https://hire.glitch.me"
+    img: "https://cdn.discordapp.com/attachments/573922541152763931/1029089159723360367/unknown.png",
+    name: "RoboJumpers",
+    subtitle: "a fast paced party game!",
+    link: "http://gamelounge.tripe.one/robojumpers/"
   },
+  {
+    img: "https://cdn.discordapp.com/attachments/1026452753532338288/1028735992338849945/unknown.png",
+    name: "GameLounge",
+    subtitle: "Looking for more fun? Play with your friends on GameLounge!",
+    link: "http://gamelounge.tripe.one"
+  },
+  // {
+  //   img: "https://img.itch.zone/aW1nLzU1ODc2ODYucG5n/347x500/HShPho.png",
+  //   name: "Hire",
+  //   subtitle: "I'm running out of lines!",
+  //   link: "https://hire.glitch.me"
+  // },
   // {
   //   img: "",
   //   name: "",
