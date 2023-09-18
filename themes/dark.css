@@ -28,8 +28,8 @@ body {
 
 a {
 	color: var(--fg);
-	padding: 10px;
-	text-decoration: none;
+/*	padding: 10px;*/
+/*	text-decoration: none;*/
 	transition: 0.2s;
 }
 
@@ -40,12 +40,17 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
+	font-weight: bold;
 }
 
 p {
-	/*font-size:  1em;*/
+	font-size:  14pt;
+	font-weight: 100;
 	/*text-align: justify;*/
+}
+
+img {
+	width: 100%;
 }
 
 /*******************************************/

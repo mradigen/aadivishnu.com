@@ -1,98 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Welcome to ADIGEN's website!</title>
-
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <tile>
-      <content class="t b">
-        <name>
-          ADIGEN
-        </name>
-        <subtitle>
-          a.k.a MrADIGEN
-        </subtitle>
-        <text>Hey! I'm an indie game developer who loves to build puzzle games that break the laws of physics!</text>
-        <a
-          href="https://adigen.itch.io"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          itch.io
-        </a>
-        <a
-          href="https://github.com/mradigen"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-        <a
-          href="https://www.instagram.com/mradigen/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
-        <a
-          href="https://www.reddit.com/user/mradigen"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Reddit
-        </a>
-      </content>
-    </tile>
-<!--     <tile>
-      <content class="b">
-        <name></name>
-        <subtitle></subtitle>
-      </content>
-      <a target="_blank" rel="noopener noreferrer"><span></span></a>
-    </tile>
-    <tile>
-      <content class="t">
-        <name></name>
-        <subtitle></subtitle>
-      </content>
-      <a target="_blank" rel="noopener noreferrer"><span></span></a>
-    </tile>
-    <tile>
-      <content class="b">
-        <name></name>
-        <subtitle></subtitle>
-      </content>
-      <a target="_blank" rel="noopener noreferrer"><span></span></a>
-    </tile>
-    <tile>
-      <content class="b">
-        <name></name>
-        <subtitle></subtitle>
-      </content>
-      <a target="_blank" rel="noopener noreferrer"><span></span></a>
-    </tile>
-    <tile>
-      <content class="b">
-        <name></name>
-        <subtitle></subtitle>
-      </content>
-      <a target="_blank" rel="noopener noreferrer"><span></span></a>
-    </tile> -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4M74N7GRTF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4M74N7GRTF');
-</script>
-    <script src="script.js"></script>
-  </body>
+<html>
+<head>
+	<title>Welcome to ADIGEN's website!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="header">
+		<a href="javascript:parent.loadPage('home')">ADIGEN</p>
+		<div id="links">
+			<a href="javascript:parent.loadPage('about')">About</a>
+			<a href="javascript:parent.loadPage('projects')">Projects</a>
+		</div>
+	</div>
+	<div id="UI">
+		<a href="javascript:parent.loadPage('home')" style="font-size:14pt;opacity:.5;height:unset;text-decoration:none;display:none;" id="back">&larr; home</a>
+		<div onclick="command.focus();">
+			<span id="prompt">> </span><input type="text"><span id="cursor">_</span>
+		</div>
+		<hr>
+		<iframe>
+		</iframe>
+		<!-- <p onclick="history.back()">Back</p> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/3.0.8/marked.min.js"></script>
+		<script src="MarkdownPage.js"></script>
+		<script src="script.js"></script>
+	</div>
+</body>
 </html>
