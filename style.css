@@ -17,7 +17,7 @@
 	position: absolute;
 	top: 0;
 	margin: 30px 0px;
-	width: 55vw;
+	width: 100%;
 	justify-content: space-between;
 }
 
@@ -51,21 +51,34 @@ body {
 	background-color: var(--bg);
 	color: var(--fg);
 
+	position: relative;
+
 	animation: fadein 1s;
 	-webkit-animation: fadein 1s;
 }
 
 #UI {
 	/*width: 40vw;*/
-	width: 55vw;
+	width: 100%;
 	/*max-width: 100%;*/
 	padding-bottom: 10vh;
 	transition: width 1s;
+	position: relative;
+}
+
+#back {
+	font-size: 14pt;
+	opacity: .5;
+	height: unset;
+	text-decoration: none;
+	display: none;
+	position: absolute;
+	top: -25px;
 }
 
 @media only screen and (max-width: 680px) {
-	#UI {
-		width: 80vw;
+	body {
+		width: 90vw;
 	}
 }
 
@@ -106,6 +119,28 @@ a {
 	height: 0;
 	color: var(--fg);
 	text-decoration: none;
+}
+
+.fadein {
+	animation: fadein 1s;
+	-webkit-animation: fadein 1s;
+}
+
+/*#content h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+#content p {
+	font-size:  14pt;
+	font-weight: 100;
+}
+*/
+#content img {
+	width: 100%;
+}
+
+#content a {
+	text-decoration: underline;
 }
 
 /*******************************************/

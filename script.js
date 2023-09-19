@@ -1,4 +1,5 @@
 var command = document.getElementsByTagName('input')[0];
+var article = document.querySelector('#content');
 
 function resizeInput() {
 	this.style.width = this.value.length + 'ch';
@@ -48,20 +49,7 @@ window.onload = () => {
 	}
 }
 
-var article = new MarkdownPage(
-	document.getElementsByTagName('iframe')[0],
-	"pages/index.md",
-	"themes/dark.css"
-);
-
-article.onload = () => {
-	// Replay fadein animation
-	article.iframe.contentDocument.body.classList.remove('fadein');
-	void article.iframe.contentDocument.body.offsetWidth;
-	article.iframe.contentDocument.body.classList.add('fadein');
-};
-
-function loadPage(pageSrc, historyBack = false) {
+async function loadPage(pageSrc, historyBack = false) {
 	command.value = pageSrc;
 	resizeInput.call(command);
 
@@ -69,8 +57,12 @@ function loadPage(pageSrc, historyBack = false) {
 		window.history.pushState(pageSrc, null, "?p=" + pageSrc);
 	}
 
-	article.src = "pages/" + pageSrc + ".md";
-	article.load();
+	var res = await fetch("pages/" + pageSrc + ".md")
+	marked(await res.text(), (idk, htmlParsed) => content.innerHTML = htmlParsed)
+
+	content.classList.remove('fadein');
+	void content.offsetWidth;
+	content.classList.add('fadein');
 
 	// Show back button
 	if (new URLSearchParams(window.location.search).get('p').replace(/\/$/, "") != 'home') {

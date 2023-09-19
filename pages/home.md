@@ -2,6 +2,6 @@
 
 I'm a teenage computer hobbyist who loves programming, building, and breaking stuff. I started out with [game development](https://adigen.is-a.dev/games), worked as a web developer, and findled around a lot in the [world of Linux](https://github.com/mradigen/dotfiles). Right now I've taken a step back to focus on real life and college.
 
-## [About](javascript:parent.loadPage('about'))
+### [About](javascript:parent.loadPage('about'))
 
-## [Projects](javascript:parent.loadPage('projects'))
+### [Projects](javascript:parent.loadPage('projects'))
