@@ -15,8 +15,7 @@
 #header {
 	display: flex;
 	position: absolute;
-	top: 0;
-	margin: 30px 0px;
+	top: 30px;
 	width: 100%;
 	justify-content: space-between;
 }
@@ -116,7 +115,7 @@ hr {
 }
 
 a {
-	height: 0;
+/*	height: 0;*/
 	color: var(--fg);
 	text-decoration: none;
 }

@@ -60,6 +60,11 @@ async function loadPage(pageSrc, historyBack = false) {
 	var res = await fetch("pages/" + pageSrc + ".md")
 	marked(await res.text(), (idk, htmlParsed) => content.innerHTML = htmlParsed)
 
+	var aElems = document.getElementsByTagName('a');
+	for (var a of aElems) {
+		if (a.href && !a.href.startsWith('javascript')) a.target = '_blank';
+	}
+
 	content.classList.remove('fadein');
 	void content.offsetWidth;
 	content.classList.add('fadein');
