@@ -1,0 +1,48 @@
+---
+import Footer from "../components/Footer.astro";
+---
+
+<style is:global>
+	h1 {
+		@apply text-4xl mb-3;
+	}
+	h2 {
+		@apply text-3xl;
+	}
+	h3 {
+		@apply text-2xl;
+	}
+	h4 {
+		@apply text-xl;
+	}
+	p {
+		@apply text-lg tracking-wide leading-relaxed mb-6;
+	}
+	a {
+		@apply underline underline-offset-4;
+	}
+	hr {
+		@apply border-tertiary border mt-1 mb-6;
+	}
+	.table {
+		@apply grid grid-cols-[repeat(auto-fill,minmax(200px,_1fr))] gap-8 mb-6;
+	}
+	.table > div {
+		@apply flex flex-col justify-center md:border-tertiary md:border-r-2 py-3;
+	}
+	.table > div p {
+		margin: 0;
+	}
+	.table > div:nth-child(3n) {
+		border-right-width: 0px;
+	}
+	.light {
+		@apply text-tertiary bg-primary;
+	}
+	.dark {
+		@apply bg-tertiary text-primary;
+	}
+</style>
+<div class="max-w-screen-md w-full mx-auto h-full flex flex-col" id="blog">
+	<slot />
+</div>

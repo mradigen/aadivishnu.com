@@ -1,0 +1,133 @@
+---
+---
+
+<style is:global>
+@keyframes fadein {
+	0% {
+	    transform: translateY(5rem);
+		opacity: 0;
+	}
+	100% {
+	    transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+#titles h1 {
+	@apply absolute transition-all duration-500;
+	opacity: 0;
+	transform: translateY(5rem);
+}
+
+#fancy h1 {
+	@apply my-3;
+}
+
+.active {
+	transform: translateY(0rem) !important;
+	opacity: 1 !important;
+	position: sticky !important;
+	top: 1rem !important;
+}
+
+.inactive {
+	transform: translateY(-5rem) !important;
+	opacity: 0 !important;
+}
+</style>
+
+<div class="w-full h-screen flex flex-col sm:flex-row light" id="fancy">
+	<div class="w-full h-full flex items-end justify-center sm:items-center sm:justify-end">
+		<h1 class="text-right sticky top-[1rem]">Hey &#128075&#127997 , I'm&nbsp;</h1>
+	</div>
+	<div class="w-full h-full flex items-start justify-center sm:items-center sm:justify-start" id="titles">
+		<slot />
+	</div>
+</div>
+
+<script>
+	const $ = (a: any) => document.querySelector(a);
+
+	let current = 0;
+	let preventScrolling = false;
+	let touchY = 0;
+	let titles = $("#titles");
+
+	function onWheelSwitch(e: WheelEvent) {
+		if (preventScrolling) {
+			e.preventDefault()
+			return
+		}
+		if ((current < 3 && e.deltaY > 0 || current > 0 && e.deltaY < 0 ) && document.documentElement.scrollTop == 0) e.preventDefault()
+		else return
+		setTimeout(() => { preventScrolling = false; }, 300);
+		preventScrolling = true;
+
+		titles.children[current].classList.remove('active')
+		if (e.deltaY > 0) {
+			titles.children[current].classList.add('inactive')
+			current += 1
+		} else {
+			current -= 1
+		}
+		titles.children[current].classList.remove('inactive')
+		titles.children[current].classList.add('active')
+	}
+	function onTouchSwitch(e: TouchEvent) {
+		let deltaY = touchY - e.changedTouches[0].pageY
+		touchY = e.changedTouches[0].pageY
+		if (preventScrolling) {
+			e.preventDefault()
+			return
+		}
+		if ((current < 3 && deltaY > 0 || current > 0 && deltaY < 0 ) && document.documentElement.scrollTop == 0) e.preventDefault()
+		else return
+		setTimeout(() => { preventScrolling = false; }, 500);
+		preventScrolling = true;
+
+		titles.children[current].classList.remove('active')
+		if (deltaY > 0) {
+			titles.children[current].classList.add('inactive')
+			current += 1
+		} else {
+			current -= 1
+		}
+		titles.children[current].classList.remove('inactive')
+		titles.children[current].classList.add('active')
+	}
+	function onKeySwitch(e: Event) {
+		let deltaY = 0;
+		if ([40,32,34].find(x=>x==e.keyCode)) deltaY = 1;
+		else if ([33,38].find(x=>x==e.keyCode)) deltaY = -1;
+
+		if ((current < 3 && deltaY > 0 || current > 0 && deltaY < 0 ) && document.documentElement.scrollTop == 0) e.preventDefault()
+		else return
+
+		titles.children[current].classList.remove('active')
+		if (deltaY > 0) {
+			titles.children[current].classList.add('inactive')
+			current += 1
+		} else {
+			current -= 1
+		}
+		titles.children[current].classList.remove('inactive')
+		titles.children[current].classList.add('active')
+	}
+
+	document.addEventListener('wheel', onWheelSwitch, { passive: false });
+	document.addEventListener('touchstart', e => { touchY = e.touches[0].pageY }, { passive: false });
+	document.addEventListener('touchmove', onTouchSwitch, { passive: false });
+	document.addEventListener('keydown', onKeySwitch, { passive: false });
+
+	window.addEventListener('load', () => {
+		if (document.documentElement.scrollTop != 0) {
+			for (let child of titles.children) {
+				child.classList.remove('active')
+				child.classList.add('inactive')
+			}
+			current = 3
+			titles.children[3].classList.remove('inactive')
+			titles.children[3].classList.add('active')
+		}
+	});
+</script>

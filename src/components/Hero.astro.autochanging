@@ -1,0 +1,56 @@
+---
+
+---
+
+<style is:global>
+	#titles h1 {
+		@apply absolute transition-all duration-500;
+		opacity: 0;
+		transform: translateY(5rem);
+	}
+
+	#fancy h1 {
+		@apply my-3;
+	}
+
+	.active {
+		transform: translateY(0rem) !important;
+		opacity: 1 !important;
+		position: sticky !important;
+		top: 1rem !important;
+	}
+
+	.inactive {
+		transform: translateY(-5rem) !important;
+		opacity: 0 !important;
+	}
+</style>
+
+<div class="w-full flex flex-col sm:flex-row light" id="fancy">
+	<div
+		class="w-full h-full flex items-end justify-center sm:items-center sm:justify-end"
+	>
+		<h1 class="text-right sticky">Hey &#128075&#127997 , I'm&nbsp;</h1>
+	</div>
+	<div
+		class="w-full h-full flex items-start justify-center sm:items-center sm:justify-start"
+		id="titles"
+	>
+		<slot />
+	</div>
+</div>
+
+<script>
+	const $ = (a: any) => document.querySelector(a);
+
+	let current = 0;
+	let titles = $("#titles");
+	setInterval(() => {
+		titles.children[current].classList.remove("active");
+		titles.children[current].classList.add("inactive");
+		current += 1;
+		if (current > 3) current = 0;
+		titles.children[current].classList.remove("inactive");
+		titles.children[current].classList.add("active");
+	}, 2000);
+</script>
