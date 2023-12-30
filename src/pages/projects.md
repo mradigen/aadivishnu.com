@@ -34,11 +34,12 @@ Displays messages as a Rich Presence status on Discord.
 Dotfiles for my bspwm rice on Arch Linux.
 
 </div>
+
 <div>
 
-### [T-UI dots](https://github.comt/mradigen/tui-cysis)
+### [lugfetch](https://github.com/lugvitc/lugfetch)
 
-Config files for the Android launcher T-UI.
+A fetch tool written in POSIX sh and C++
 
 </div>
 <div>
@@ -81,6 +82,13 @@ A service that allows one to get their skills vetted and certified.
 ### [Game lounge](https://adigen.is-a.dev/games)
 
 Lounge of games I previously made as a game dev.
+
+</div>
+<div>
+
+### [T-UI dots](https://github.comt/mradigen/tui-cysis)
+
+Config files for the Android launcher T-UI.
 
 </div>
 </div>

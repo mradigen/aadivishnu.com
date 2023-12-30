@@ -45,9 +45,9 @@ Dotfiles for my bspwm rice on Arch Linux.
 </div>
 <div>
 
-### [T-UI dots](https://github.comt/mradigen/tui-cysis)
+### [lugfetch](https://github.com/lugvitc/lugfetch)
 
-Config files for the Android launcher T-UI.
+A fetch tool written in POSIX sh and C++
 
 </div>
 <div>
