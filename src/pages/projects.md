@@ -86,7 +86,7 @@ Lounge of games I previously made as a game dev.
 </div>
 <div>
 
-### [T-UI dots](https://github.comt/mradigen/tui-cysis)
+### [T-UI dots](https://github.com/mradigen/tui-cysis)
 
 Config files for the Android launcher T-UI.
 
