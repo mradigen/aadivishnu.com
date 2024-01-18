@@ -80,7 +80,7 @@ A service that allows one to get their skills vetted and certified.
 </div>
 <div>
 
-### [Game lounge](https://adigen.is-a.dev/games)
+### [Game lounge](https://aadivishnu.com/games)
 
 Lounge of games I previously made as a game dev.
 
