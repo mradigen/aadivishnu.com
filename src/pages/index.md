@@ -1,5 +1,6 @@
 ---
 layout: ../layouts/Landing.astro
+title: Aadivishnu Gajendra
 ---
 
 <!-- I'm a 17 y/o computer hobbyist who loves programming, building new tech, and breaking existing ones. I started out with [game development](https://adigen.is-a.dev/games), worked as a web developer, and fiddled around a lot in [the world of Linux](https://github.com/mradigen). -->

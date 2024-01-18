@@ -1,5 +1,6 @@
 ---
 layout: ../layouts/Main.astro
+title: Aadivishnu Gajendra • Projects
 ---
 
 # Projects

@@ -2,9 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import Blog from '../components/Blog.astro'
 import Footer from '../components/Footer.astro'
+const { frontmatter } = Astro.props
 ---
 
-<BaseLayout>
+<BaseLayout title={frontmatter.title}>
 	<Blog>
 		<h1 class="text-center mb-4 mt-6">
 			Hey &#128075&#127997 , I'm Aadivishnu

@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from 'astro:transitions'
+const { title } = Astro.props
 ---
 
 <html>
@@ -19,6 +20,7 @@ import { ViewTransitions } from 'astro:transitions'
 			defer
 			data-domain="aadivishnu.com"
 			src="https://analytics.tripe.one/js/script.js"></script>
+		<title>{title}</title>
 		<ViewTransitions />
 	</head>
 	<body class="light px-3 py-4 h-screen">
