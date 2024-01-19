@@ -22,9 +22,9 @@ Fastest way to play Minecraft Multiplayer.
 </div>
 <div>
 
-### [Discord RPC](https://github.com/mradigen/discord-rpc-status)
+### [Vert.ai](https://github.com/mradigen/vert.ai)
 
-Displays messages as a Rich Presence status on Discord.
+Stock brokerage app using predictive analysis in green finance.
 
 </div>
 
@@ -90,6 +90,13 @@ Lounge of games I previously made as a game dev.
 ### [T-UI dots](https://github.com/mradigen/tui-cysis)
 
 Config files for the Android launcher T-UI.
+
+</div>
+<div>
+
+### [Discord RPC](https://github.com/mradigen/discord-rpc-status)
+
+Displays messages as a Rich Presence status on Discord.
 
 </div>
 </div>
