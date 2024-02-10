@@ -6,7 +6,7 @@ title: Aadivishnu Gajendra
 <!-- I'm a 17 y/o computer hobbyist who loves programming, building new tech, and breaking existing ones. I started out with [game development](https://adigen.is-a.dev/games), worked as a web developer, and fiddled around a lot in [the world of Linux](https://github.com/mradigen). -->
 <!-- My original love for tech began with hardware where I built a 4-bit ALU out of bare transistors at the age of 9. -->
 
-I'm a 17 y/o developer who loves to code, build things, and automate workflows. I've worked in wide range of tech domains from building CPUs to creating Linux distros. My original love for tech began at the age of 9 where I made my first 4-bit ALU out of transistors.
+I'm a tech enthusiast who loves to code, build things, and automate workflows. I've worked in wide range of tech domains from building CPUs to creating Linux distros. My original love for tech began at the age of 9 where I made my first 4-bit ALU out of transistors.
 
 Outside of tech, I enjoy [making music](https://youtube.com/adigen), [creating voxel art](https://instagram.com/mradigen), and [playing flight simulators](https://warthunder.com).
 
@@ -31,9 +31,9 @@ Fastest way to play Minecraft Multiplayer.
 </div>
 <div>
 
-### [Discord RPC](https://github.com/mradigen/discord-rpc-status)
+### [PWNC0R3](https://github.com/lugvitc/pwncore)
 
-Displays messages as a Rich Presence status on Discord.
+A CTF platform backend with dynamic flags and A&D support.
 
 </div>
 
@@ -46,7 +46,7 @@ Dotfiles for my bspwm rice on Arch Linux.
 </div>
 <div>
 
-### [lugfetch](https://github.com/lugvitc/lugfetch)
+### [grab](https://github.com/StratOS-Linux/grab)
 
 A fetch tool written in POSIX sh and C++
 

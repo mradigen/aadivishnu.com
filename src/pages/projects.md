@@ -22,6 +22,13 @@ Fastest way to play Minecraft Multiplayer.
 </div>
 <div>
 
+### [PWNC0R3](https://github.com/lugvitc/pwncore)
+
+A CTF platform backend with dynamic flags and A&D support.
+
+</div>
+<div>
+
 ### [Vert.ai](https://github.com/mradigen/vert.ai)
 
 Stock brokerage app using predictive analysis in green finance.
@@ -38,7 +45,7 @@ Dotfiles for my bspwm rice on Arch Linux.
 
 <div>
 
-### [lugfetch](https://github.com/lugvitc/lugfetch)
+### [grab](https://github.com/StratOS-Linux/grab)
 
 A fetch tool written in POSIX sh and C++
 
