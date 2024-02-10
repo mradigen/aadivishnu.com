@@ -52,6 +52,13 @@ A fetch tool written in POSIX sh and C++
 </div>
 <div>
 
+### [pam_wifi](https://github.com/mradigen/pam_wifi)
+
+Authorize user when the system is connected to a given WiFi network.
+
+</div>
+<div>
+
 ### [scripts](https://github.com/mradigen/scripts)
 
 Collection of shell scripts I've made that you might find useful :D
